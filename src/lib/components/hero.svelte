@@ -1,4 +1,4 @@
-<section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 pt-16">
+<section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br bg-catbase pt-16">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <div class="max-w-4xl mx-auto">
       <!-- Profile Image -->

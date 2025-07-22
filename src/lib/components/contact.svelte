@@ -29,12 +29,12 @@
   }
 </script>
 
-<section id="contact" class="py-20 bg-gray-50">
+<section id="contact" class="py-20 bg-catbase">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
-      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Kontakt</h2>
+      <h2 class="text-4xl md:text-5xl font-bold text-cattext mb-4">Kontakt</h2>
       <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+      <p class="text-xl text-cattext max-w-3xl mx-auto">
         Haben Sie ein Projekt im Kopf? Lassen Sie uns darüber sprechen!
       </p>
     </div>
@@ -43,8 +43,8 @@
       <!-- Contact Info -->
       <div class="space-y-8">
         <div>
-          <h3 class="text-2xl font-bold text-gray-900 mb-6">Lassen Sie uns in Kontakt treten</h3>
-          <p class="text-lg text-gray-600 leading-relaxed mb-8">
+          <h3 class="text-2xl font-bold text-cattext mb-6">Lassen Sie uns in Kontakt treten</h3>
+          <p class="text-lg text-cattext leading-relaxed mb-8">
             Ich bin immer offen für neue Projekte und spannende Herausforderungen. 
             Schreiben Sie mir eine Nachricht und ich melde mich schnellstmöglich bei Ihnen.
           </p>
@@ -59,8 +59,8 @@
               </svg>
             </div>
             <div>
-              <h4 class="font-semibold text-gray-900">E-Mail</h4>
-              <p class="text-gray-600">max.mustermann@email.com</p>
+              <h4 class="font-semibold text-cattext">E-Mail</h4>
+              <p class="text-cattext">max.mustermann@email.com</p>
             </div>
           </div>
           
@@ -71,8 +71,8 @@
               </svg>
             </div>
             <div>
-              <h4 class="font-semibold text-gray-900">Telefon</h4>
-              <p class="text-gray-600">+49 123 456 7890</p>
+              <h4 class="font-semibold text-cattext">Telefon</h4>
+              <p class="text-cattext">+49 123 456 7890</p>
             </div>
           </div>
           
@@ -84,15 +84,15 @@
               </svg>
             </div>
             <div>
-              <h4 class="font-semibold text-gray-900">Standort</h4>
-              <p class="text-gray-600">Berlin, Deutschland</p>
+              <h4 class="font-semibold text-cattext">Standort</h4>
+              <p class="text-cattext">Berlin, Deutschland</p>
             </div>
           </div>
         </div>
         
         <!-- Social Links -->
         <div class="pt-8">
-          <h4 class="font-semibold text-gray-900 mb-4">Folgen Sie mir</h4>
+          <h4 class="font-semibold text-cattext mb-4">Folgen Sie mir</h4>
           <div class="flex space-x-4">
             <a href="https://www.facebook.com" aria-label="Facebook" class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -114,11 +114,11 @@
       </div>
       
       <!-- Contact Form -->
-      <div class="bg-white p-8 rounded-2xl shadow-lg">
+      <div class="bg-catsurface p-8 rounded-2xl shadow-lg">
         <form onsubmit={handleSubmit} class="space-y-6">
           <div class="grid md:grid-cols-2 gap-6">
             <div>
-              <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+              <label for="name" class="block text-sm font-medium text-cattext mb-2">Name</label>
               <input
                 type="text"
                 id="name"
@@ -129,7 +129,7 @@
               />
             </div>
             <div>
-              <label for="email" class="block text-sm font-medium text-gray-700 mb-2">E-Mail</label>
+              <label for="email" class="block text-sm font-medium text-cattext mb-2">E-Mail</label>
               <input
                 type="email"
                 id="email"
@@ -142,7 +142,7 @@
           </div>
           
           <div>
-            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Betreff</label>
+            <label for="subject" class="block text-sm font-medium text-cattext mb-2">Betreff</label>
             <input
               type="text"
               id="subject"
@@ -154,7 +154,7 @@
           </div>
           
           <div>
-            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Nachricht</label>
+            <label for="message" class="block text-sm font-medium text-cattext mb-2">Nachricht</label>
             <textarea
               id="message"
               bind:value={formData.message}

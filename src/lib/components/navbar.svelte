@@ -1,5 +1,6 @@
 <script>
   let isMenuOpen = $state(false);
+  let activeSection = $state('#home');
   
   const navItems = [
     { href: '#home', label: 'Home' },
@@ -16,6 +17,7 @@
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+    activeSection = href;
     isMenuOpen = false;
   }
 </script>
@@ -29,9 +31,13 @@
           {#each navItems as item}
             <button
               onclick={() => scrollToSection(item.href)}
-              class="text-gray-700 px-3 py-2 text-sm font- transition-colors duration-200 rounded-md"
+              class="text-cattext px-3 py-2 font-bold transition-colors duration-200 rounded-md"
             >
               {item.label}
+              <!-- Active indicator dot -->
+              {#if activeSection === item.href}
+                <div class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-cattext rounded-full transition-all duration-300"></div>
+              {/if}
             </button>
           {/each}
         </div>
@@ -41,7 +47,7 @@
       <div class="md:hidden">
         <button
           onclick={() => isMenuOpen = !isMenuOpen}
-          class="text-gray-700 focus:outline-none focus:text-blue-600 p-2"
+          class="text-cattext focus:outline-none p-2"
         >
           <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             {#if isMenuOpen}
@@ -57,12 +63,12 @@
   
   <!-- Mobile Navigation -->
   {#if isMenuOpen}
-    <div class="md:hidden bg-white border-t border-gray-200">
+    <div class="md:hidden bg-catbase">
       <div class="px-2 pt-2 pb-3 space-y-1">
         {#each navItems as item}
           <button
             onclick={() => scrollToSection(item.href)}
-            class="text-gray-700 block px-3 py-2 text-base font-medium w-full text-left rounded-md transition-colors"
+            class="text-cattext block px-3 py-2 font-medium w-full text-left rounded-md transition-colors"
           >
             {item.label}
           </button>

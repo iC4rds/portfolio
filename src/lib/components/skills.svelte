@@ -1,9 +1,9 @@
-<section id="skills" class="py-20 bg-gray-50">
+<section id="skills" class="py-20 bg-catbase">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
-      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Meine Skills</h2>
+      <h2 class="text-4xl md:text-5xl font-bold text-cattext mb-4">Meine Skills</h2>
       <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+      <p class="text-xl text-cattext max-w-3xl mx-auto">
         Technologien und Tools, mit denen ich täglich arbeite
       </p>
     </div>

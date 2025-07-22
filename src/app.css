@@ -1,9 +1,10 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-catbase: ##1e1e2e;
-  --color-cattext: ##bac2de;
-  --color-catblue: ##89b4fa;
-  --color-catmauve: ##cba6f7;
-  --color-catgreen: ##a6e3a1;
+  --color-catbase: #1e1e2e;
+  --color-catsurface: #313244;
+  --color-cattext: #bac2de;
+  --color-catblue: #89b4fa;
+  --color-catmauve: #cba6f7;
+  --color-catgreen: #a6e3a1;
 }

@@ -66,50 +66,5 @@
 				</div>
 			</div>
 		</div>
-
-		<div class="mt-8 pt-6 border-t border-cattext/10">
-			<div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-				<div class="flex space-x-6">
-					<a
-						href="#privacy"
-						class="text-cattext/60 hover:text-cattext text-sm transition-colors duration-200"
-					>
-						Privacy Policy
-					</a>
-					<a
-						href="#terms"
-						class="text-cattext/60 hover:text-cattext text-sm transition-colors duration-200"
-					>
-						Terms of Service
-					</a>
-					<a
-						href="#imprint"
-						class="text-cattext/60 hover:text-cattext text-sm transition-colors duration-200"
-					>
-						Imprint
-					</a>
-				</div>
-
-				<button
-					onclick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-					class="flex items-center space-x-2 text-cattext/60 hover:text-cattext text-sm transition-colors duration-200 group"
-				>
-					<span>Back to top</span>
-					<svg
-						class="w-4 h-4 transform group-hover:-translate-y-1 transition-transform duration-200"
-						fill="none"
-						stroke="currentColor"
-						viewBox="0 0 24 24"
-					>
-						<path
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M5 10l7-7m0 0l7 7m-7-7v18"
-						/>
-					</svg>
-				</button>
-			</div>
-		</div>
 	</div>
 </footer>

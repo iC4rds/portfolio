@@ -51,7 +51,7 @@
           </li>
           <li class="flex items-center">
             <span class="w-2 h-2 bg-catgreen rounded-full mr-3"></span>
-            PostgreSQL & MongoDB
+            PostgreSQL & SQLite & MongoDB
           </li>
           <li class="flex items-center">
             <span class="w-2 h-2 bg-catgreen rounded-full mr-3"></span>
@@ -78,7 +78,7 @@
           </li>
           <li class="flex items-center">
             <span class="w-2 h-2 bg-catmauve rounded-full mr-3"></span>
-            Vite & Joy.io
+            Firebase & Turso & Fly.io
           </li>
           <li class="flex items-center">
             <span class="w-2 h-2 bg-catmauve rounded-full mr-3"></span>

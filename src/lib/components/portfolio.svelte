@@ -21,7 +21,7 @@
       title: "Portfolio Website",
       description: "Responsive Portfolio-Website mit modernem Design in Svelte",
       image: "/placeholder.svg?height=300&width=400",
-      tags: ["Svelte", "Tailwind", "Vercel"],
+      tags: ["Svelte", "Torso", "fly.io"],
       link: "https://github.com/iC4rds/portfolio"
     }
   ];

@@ -1,6 +1,4 @@
 <script>
-	import { is } from "drizzle-orm";
-
   let isScrolling = false;
 	let activeSection = $state('#home');
 

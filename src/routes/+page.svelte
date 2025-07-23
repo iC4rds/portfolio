@@ -4,6 +4,7 @@
   import Skills from '$lib/components/skills.svelte';
   import Portfolio from '$lib/components/portfolio.svelte';
   import Contact from '$lib/components/contact.svelte';
+  import Footer from '$lib/components/footer.svelte';
 </script>
 
 <div class="min-h-screen bg-gray-50">
@@ -14,5 +15,6 @@
     <Skills />
     <Portfolio />
     <Contact />
+    <Footer />
   </main>
 </div>

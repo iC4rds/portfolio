@@ -6,7 +6,7 @@
       description: "Moderne E-Commerce Lösung mit Svelte, Bun und ElysiaJS",
       image: "/placeholder.svg?height=300&width=400",
       tags: ["Svelte", "Bun", "MongoDB", "GraphQL"],
-      link: "#"
+      link: "https://github.com/iC4rds/dotfiles"
     },
     {
       id: 2,
@@ -14,7 +14,7 @@
       description: "App zum Tracken von Workouts und Exercises mit React Native und Firebase",
       image: "/placeholder.svg?height=300&width=400",
       tags: ["React-Native", "Firebase", "Tailwind"],
-      link: "#"
+      link: "https://github.com/iC4rds/gym-app"
     },
     {
       id: 3,
@@ -22,7 +22,7 @@
       description: "Responsive Portfolio-Website mit modernem Design in Svelte",
       image: "/placeholder.svg?height=300&width=400",
       tags: ["Svelte", "Tailwind", "Vercel"],
-      link: "#"
+      link: "https://github.com/iC4rds/portfolio"
     }
   ];
 </script>
@@ -37,7 +37,6 @@
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       {#each projects as project}
         <div class="bg-catsurface rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden group">
-          <!-- Project Image -->
           <div class="relative overflow-hidden">
             <img 
               src={project.image || "/placeholder.svg"} 
@@ -54,12 +53,10 @@
             </div>
           </div>
           
-          <!-- Project Content -->
           <div class="p-6">
             <h3 class="text-xl font-bold text-cattext mb-3">{project.title}</h3>
             <p class="text-cattext mb-4 leading-relaxed">{project.description}</p>
             
-            <!-- Tags -->
             <div class="flex flex-wrap gap-2">
               {#each project.tags as tag}
                 <span class="px-3 py-1 bg-catblue text-catsurface text-sm rounded-full font-medium">

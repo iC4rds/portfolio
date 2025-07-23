@@ -21,7 +21,7 @@
 		}
     setTimeout(() => {
       isScrolling = false;
-    }, 1000);
+    }, 600);
 	}
 
 	$effect(() => {
@@ -46,10 +46,10 @@
 </script>
 
 <nav class="fixed top-0 w-full bg-catbase backdrop-blur-md z-50">
-	<div class="max-w-7xl mx-auto px-1 sm:px-6 lg:px-8">
-		<div class="flex justify-between items-center h-16">
-			<div class="hidden md:block">
-				<div class="ml-10 flex items-baseline space-x-64">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="flex justify-center items-center h-16">
+			<div class="flex items-center justify-center w-full">
+				<div class="flex items-baseline space-x-4 sm:space-x-8 md:space-x-16 lg:space-x-64">
 					{#each navItems as item}
 						<button
 							onclick={() => scrollToSection(item.href)}

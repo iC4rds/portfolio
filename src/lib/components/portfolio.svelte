@@ -1,12 +1,15 @@
 <script>
+  import { slide, scale, fly } from 'svelte/transition';
+  import { quintOut, elasticOut } from 'svelte/easing';
+
   const projects = [
     {
       id: 1,
-      title: "Linux dotfiles",
-      description: "Arch Linux mit Hyprland",
+      title: "Weather cli",
+      description: "A command-line tool to fetch current weather data, with multi-language support.",
       image: "/rice.png?height=300&width=400",
-      tags: ["Arch", "Hyprland", "Fish"],
-      link: "https://github.com/iC4rds/dotfiles"
+      tags: ["TypeScript", "Bun", "OpenWeatherMap"],
+      link: "https://github.com/iC4rds/weather-cli"
     },
     {
       id: 2,
@@ -23,8 +26,29 @@
       image: "/placeholder.svg?height=300&width=400",
       tags: ["SvelteKit", "Bun", "Turso"],
       link: "https://github.com/iC4rds/portfolio"
-    }
+    },
+    {
+      id: 4,
+      title: "Linux dotfiles",
+      description: "Arch Linux mit Hyprland",
+      image: "/rice.png?height=300&width=400",
+      tags: ["Arch", "Hyprland", "Fish"],
+      link: "https://github.com/iC4rds/dotfiles"
+    },
   ];
+
+  let showAllProjects = false;
+  let displayedProjects = [];
+
+  $: displayedProjects = showAllProjects ? projects : projects.slice(0, 3);
+
+  function toggleShowAll() {
+    showAllProjects = true;
+  }
+
+  function toggleHideAll() {
+    showAllProjects = false;
+  }
 </script>
 
 <section id="portfolio" class="py-20 bg-catbase">
@@ -35,7 +59,7 @@
     </div>
     
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {#each projects as project}
+      {#each displayedProjects as project}
         <div class="bg-catsurface rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden group">
           <div class="relative overflow-hidden">
             <img 
@@ -69,10 +93,25 @@
       {/each}
     </div>
     
-    <div class="text-center mt-12">
-      <button class="bg-catblue hover:bg-catsurface text-catsurface hover:text-catblue px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-        Alle Projekte ansehen
-      </button>
-    </div>
+    {#if projects.length > 3 && !showAllProjects}
+      <div class="text-center mt-12">
+        <button 
+          on:click={toggleShowAll}
+          class="bg-catblue hover:bg-catsurface text-catsurface hover:text-catblue px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+        >
+          Alle Projekte ansehen
+        </button>
+      </div>
+    {/if}
+    {#if projects.length > 3 && showAllProjects}
+      <div class="text-center mt-12">
+        <button 
+          on:click={toggleHideAll}
+          class="bg-catblue hover:bg-catsurface text-catsurface hover:text-catblue px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+        >
+          Weniger anzeigen
+        </button>
+      </div>
+    {/if}
   </div>
 </section>

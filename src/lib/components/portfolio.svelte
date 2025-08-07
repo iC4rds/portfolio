@@ -2,10 +2,10 @@
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "Moderne E-Commerce Lösung mit Svelte, Bun und ElysiaJS",
-      image: "/placeholder.svg?height=300&width=400",
-      tags: ["Svelte", "Bun", "MongoDB", "GraphQL"],
+      title: "Linux dotfiles",
+      description: "Arch Linux mit Hyprland",
+      image: "/rice.png?height=300&width=400",
+      tags: ["Arch", "Hyprland", "Fish"],
       link: "https://github.com/iC4rds/dotfiles"
     },
     {
@@ -21,7 +21,7 @@
       title: "Portfolio Website",
       description: "Responsive Portfolio-Website mit modernem Design in Svelte",
       image: "/placeholder.svg?height=300&width=400",
-      tags: ["Svelte", "Torso", "fly.io"],
+      tags: ["SvelteKit", "Bun", "Turso"],
       link: "https://github.com/iC4rds/portfolio"
     }
   ];

@@ -39,7 +39,7 @@
         <div class="bg-catsurface rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden group">
           <div class="relative overflow-hidden">
             <img 
-              src={project.image || "/placeholder.svg"} 
+              src={project.image} 
               alt={project.title}
               class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
             />

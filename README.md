@@ -9,16 +9,12 @@ A modern, responsive portfolio website built with SvelteKit and styled with Catp
 - **Smooth Animations** - Elegant transitions and hover effects using Svelte transitions
 - **Project Showcase** - Interactive portfolio section with expandable project grid
 - **Fast Performance** - Built with SvelteKit for optimal loading speeds
-- **TypeScript Ready** - Full TypeScript support for better development experience
 
 ## Getting Started
 
-### Prerequisites
-
-- [Bun](https://bun.sh/) (latest version)
-- Node.js 18+ (for compatibility)
-
 ### Installation
+
+Make sure to have [Bun](https://bun.sh/) installed on your System
 
 1. Clone the repository:
 ```bash
@@ -43,31 +39,35 @@ bun run dev
 - **Framework**: SvelteKit
 - **Runtime**: Bun
 - **Database**: Turso (SQLite)
-- **Styling**: Tailwind CSS with custom Catppuccin them
+- **Styling**: Tailwind CSS with custom Catppuccin theme
 
 ## Project Structure
 
 ```
 src/
 ├── lib/
-│   └── components/     # Reusable Svelte components
-├── routes/            # SvelteKit routes
+│   └── components/   # Reusable Svelte components
+│   └── server/db/    # Database setup
+├── routes/           # SvelteKit routes
+│   └── api/          # SvelteKit api
 ├── app.html          # Main HTML template
 └── app.css           # Global styles
 
 static/
 ├── favicon.svg       # Custom Catppuccin favicon
-└── assets/          # Images and static files
+└── assets/           # Images and static files
 ```
 
 ## Color Scheme
 
 This portfolio uses the beautiful [Catppuccin](https://catppuccin.com/) color palette:
-- **Base**: `#1e1e2e`
-- **Surface**: `#313244`  
-- **Text**: `#cdd6f4`
-- **Blue**: `#89b4fa`
-- **Pink**: `#f38ba8`
+- **Base**: `#303446`
+- **Crust**: `#232634`
+- **Surface**: `#414559`  
+- **Text**: `#c6d0f5`
+- **Blue**: `#8caaee`
+- **Mauve**: `#ca9ee6`
+- **Green**: `#a6d189`
 
 ## License
 MIT

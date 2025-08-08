@@ -1,38 +1,73 @@
-# sv
+# Portfolio Website
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A modern, responsive portfolio website built with SvelteKit and styled with Catppuccin colors. Features smooth animations, a clean design, and showcases my projects and skills.
 
-## Creating a project
+## Features
 
-If you're seeing this, you've probably already done this step. Congrats!
+- **Modern Design** - Clean, minimalistic interface with Catppuccin color scheme
+- **Responsive Layout** - Works perfectly on desktop, tablet, and mobile devices
+- **Smooth Animations** - Elegant transitions and hover effects using Svelte transitions
+- **Project Showcase** - Interactive portfolio section with expandable project grid
+- **Fast Performance** - Built with SvelteKit for optimal loading speeds
+- **TypeScript Ready** - Full TypeScript support for better development experience
 
+## Getting Started
+
+### Prerequisites
+
+- [Bun](https://bun.sh/) (latest version)
+- Node.js 18+ (for compatibility)
+
+### Installation
+
+1. Clone the repository:
 ```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+git clone https://github.com/iC4rds/portfolio.git
+cd portfolio
 ```
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
+2. Install dependencies:
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+bun install
 ```
 
-## Building
-
-To create a production version of your app:
-
+3. Start the development server:
 ```bash
-npm run build
+bun run dev
 ```
 
-You can preview the production build with `npm run preview`.
+4. Open your browser and visit `http://localhost:5173`
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## Tech Stack
+
+- **Framework**: SvelteKit
+- **Runtime**: Bun
+- **Database**: Turso (SQLite)
+- **Styling**: Tailwind CSS with custom Catppuccin them
+
+## Project Structure
+
+```
+src/
+├── lib/
+│   └── components/     # Reusable Svelte components
+├── routes/            # SvelteKit routes
+├── app.html          # Main HTML template
+└── app.css           # Global styles
+
+static/
+├── favicon.svg       # Custom Catppuccin favicon
+└── assets/          # Images and static files
+```
+
+## Color Scheme
+
+This portfolio uses the beautiful [Catppuccin](https://catppuccin.com/) color palette:
+- **Base**: `#1e1e2e`
+- **Surface**: `#313244`  
+- **Text**: `#cdd6f4`
+- **Blue**: `#89b4fa`
+- **Pink**: `#f38ba8`
+
+## License
+MIT

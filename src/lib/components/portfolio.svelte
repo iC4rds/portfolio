@@ -22,7 +22,7 @@
     {
       id: 3,
       title: "Portfolio Website",
-      description: "Responsive Portfolio-Website mit modernem Design in Svelte",
+      description: "A modern, responsive portfolio website built with SvelteKit and styled with Catppuccin colors.",
       image: "/placeholder.svg?height=300&width=400",
       tags: ["SvelteKit", "Bun", "Turso"],
       link: "https://github.com/iC4rds/portfolio"

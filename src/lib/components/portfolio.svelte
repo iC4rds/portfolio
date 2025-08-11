@@ -1,7 +1,4 @@
 <script>
-  import { slide, scale, fly } from 'svelte/transition';
-  import { quintOut, elasticOut } from 'svelte/easing';
-
   const projects = [
     {
       id: 1,
@@ -30,7 +27,7 @@
     {
       id: 4,
       title: "Linux dotfiles",
-      description: "Arch Linux mit Hyprland",
+      description: "dotfiles and configuration files for my Arch Linux workflow with Hyprland.",
       image: "/rice.png?height=300&width=400",
       tags: ["Arch", "Hyprland", "Fish"],
       link: "https://github.com/iC4rds/dotfiles"
@@ -94,7 +91,7 @@
     </div>
     
     {#if projects.length > 3 && !showAllProjects}
-      <div class="text-center mt-12">
+      <div class="text-center mt-8">
         <button 
           on:click={toggleShowAll}
           class="bg-catblue hover:bg-catsurface text-catsurface hover:text-catblue px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
@@ -104,7 +101,7 @@
       </div>
     {/if}
     {#if projects.length > 3 && showAllProjects}
-      <div class="text-center mt-12">
+      <div class="text-center mt-8">
         <button 
           on:click={toggleHideAll}
           class="bg-catblue hover:bg-catsurface text-catsurface hover:text-catblue px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"

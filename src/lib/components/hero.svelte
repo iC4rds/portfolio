@@ -2,17 +2,10 @@
   let scrollY = $state(0);
   let heroSection: HTMLElement | null = null;
 
-  // Parallax effect calculation
   $effect(() => {
     const handleScroll = () => scrollY = window.scrollY;
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  });
-
-  const inHeroSection = $derived(() => {
-    if (!heroSection) return false;
-    const rect = heroSection.getBoundingClientRect();
-    return rect.top <= 0 && rect.bottom >= 0;
   });
 </script>
 

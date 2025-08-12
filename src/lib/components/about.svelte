@@ -1,91 +1,142 @@
+<script>
+	const skills = [
+		{
+			name: 'TypeScript',
+			icon: 'M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z',
+      link: 'https://www.typescriptlang.org/'
+    },
+		{
+			name: 'Svelte',
+			icon: 'M26.47 5.78A14.51 14.51 0 0 0 6.231.73a14.51 14.51 0 0 0-5.048 19.239 14.51 14.51 0 0 0 20.239 5.048 14.51 14.51 0 0 0 5.048-19.239zm-2.25 13.97a9.967 9.967 0 0 1-3.461 2.689 9.967 9.967 0 0 1-4.239.961 9.967 9.967 0 0 1-4.239-.961 9.967 9.967 0 0 1-3.461-2.689 9.967 9.967 0 0 1-1.961-4.239 9.967 9.967 0 0 1 .961-4.239 9.967 9.967 0 0 1 2.689-3.461 9.967 9.967 0 0 1 4.239-1.961 9.967 9.967 0 0 1 4.239.961 9.967 9.967 0 0 1 3.461 2.689 9.967 9.967 0 0 1 1.961 4.239 9.967 9.967 0 0 1-.961 4.239z',
+      link: 'https://svelte.dev/'
+    },
+		{
+			name: 'React',
+			icon: 'M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44a23.476 23.476 0 0 0-3.107-.534A23.892 23.892 0 0 0 12.769 4.7c1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28-.686.72-1.37 1.537-2.02 2.442a22.73 22.73 0 0 0-3.113.538 15.02 15.02 0 0 1-.254-1.42c-.23-1.868.054-3.32.714-3.707.19-.09.4-.127.563-.132zm4.882 3.05c.455.468.91.992 1.36 1.564-.44-.02-.89-.034-1.36-.034-.471 0-.92.014-1.36.034.44-.572.895-1.096 1.36-1.564zM12 8.1c.74 0 1.477.034 2.202.093.406.582.802 1.203 1.183 1.86.372.64.71 1.29 1.018 1.946-.308.655-.646 1.31-1.013 1.95-.38.66-.773 1.288-1.18 1.87a25.64 25.64 0 0 1-4.412.005 26.64 26.64 0 0 1-1.183-1.86c-.372-.64-.71-1.29-1.018-1.946a25.17 25.17 0 0 1 1.013-1.954c.38-.66.773-1.286 1.18-1.868A25.245 25.245 0 0 1 12 8.098zm-3.635.254c-.24.377-.48.763-.704 1.16-.225.39-.435.782-.635 1.174-.265-.656-.49-1.31-.676-1.947.64-.15 1.315-.283 2.015-.386zm7.26 0c.695.103 1.365.23 2.006.387-.18.632-.405 1.282-.66 1.933a25.952 25.952 0 0 0-1.345-2.32zm3.063.675c.484.15.944.317 1.375.498 1.732.74 2.852 1.708 2.852 2.476-.005.768-1.125 1.74-2.857 2.475-.42.18-.88.342-1.355.493a23.966 23.966 0 0 0-1.1-2.98c.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98a23.142 23.142 0 0 0-1.086 2.964c-.484-.15-.944-.318-1.37-.5-1.732-.737-2.852-1.706-2.852-2.474 0-.768 1.12-1.742 2.852-2.476.42-.18.88-.342 1.356-.494zm11.678 4.28c.265.657.49 1.312.676 1.948-.64.157-1.316.29-2.016.39a25.819 25.819 0 0 0 1.341-2.338zm-9.945.02c.2.392.41.783.64 1.175.23.39.465.772.705 1.143a22.005 22.005 0 0 1-2.006-.386c.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423.23 1.868-.054 3.32-.714 3.708-.147.09-.338.128-.563.128-1.012 0-2.514-.807-4.11-2.28.686-.72 1.37-1.536 2.02-2.44 1.107-.118 2.154-.3 3.113-.54zm-11.83.01c.96.234 2.006.415 3.107.532.66.905 1.345 1.727 2.035 2.446-1.595 1.483-3.092 2.295-4.11 2.295a1.185 1.185 0 0 1-.553-.132c-.666-.38-.955-1.834-.73-3.703.054-.46.142-.944.25-1.438zm4.56.64c.44.02.89.034 1.36.034.47 0 .92-.014 1.36-.034-.44.572-.895 1.095-1.36 1.56-.465-.467-.92-.992-1.36-1.56z',
+      link: 'https://reactjs.org/'
+    },
+		{
+			name: 'Node.js',
+			icon: 'M11.998,24c-0.321,0-0.641-0.084-0.922-0.247l-2.936-1.737c-0.438-0.245-0.224-0.332-0.08-0.383 c0.585-0.203,0.703-0.25,1.328-0.604c0.065-0.037,0.151-0.023,0.218,0.017l2.256,1.339c0.082,0.045,0.197,0.045,0.272,0l8.795-5.076 c0.082-0.047,0.134-0.141,0.134-0.238V6.921c0-0.099-0.053-0.192-0.137-0.242l-8.791-5.072c-0.081-0.047-0.189-0.047-0.271,0 L3.075,6.68C2.99,6.729,2.936,6.825,2.936,6.921v10.15c0,0.097,0.054,0.189,0.139,0.235l2.409,1.392 c1.307,0.654,2.108-0.116,2.108-0.89V7.787c0-0.142,0.114-0.253,0.256-0.253h1.115c0.139,0,0.255,0.112,0.255,0.253v10.021 c0,1.745-0.95,2.745-2.604,2.745c-0.508,0-0.909,0-2.026-0.551L2.28,18.675c-0.57-0.329-0.922-0.945-0.922-1.604V6.921 c0-0.659,0.353-1.275,0.922-1.603l8.795-5.082c0.557-0.315,1.296-0.315,1.848,0l8.794,5.082c0.570,0.329,0.924,0.944,0.924,1.603 v10.15c0,0.659-0.354,1.273-0.924,1.604l-8.794,5.078C12.643,23.916,12.324,24,11.998,24z M19.099,13.993 c0-1.9-1.284-2.406-3.987-2.763c-2.731-0.361-3.009-0.548-3.009-1.187c0-0.528,0.235-1.233,2.258-1.233 c1.807,0,2.473,0.389,2.747,1.607c0.024,0.115,0.129,0.199,0.247,0.199h1.141c0.071,0,0.138-0.031,0.186-0.081 c0.048-0.054,0.074-0.123,0.067-0.196c-0.177-2.098-1.571-3.076-4.388-3.076c-2.508,0-4.004,1.058-4.004,2.833 c0,1.925,1.488,2.457,3.895,2.695c2.88,0.282,3.103,0.703,3.103,1.269c0,0.983-0.789,1.402-2.642,1.402 c-2.327,0-2.839-0.584-3.011-1.742c-0.02-0.124-0.126-0.215-0.253-0.215h-1.137c-0.141,0-0.254,0.112-0.254,0.253 c0,1.482,0.806,3.248,4.655,3.248C17.501,17.007,19.099,15.91,19.099,13.993z',
+      link: 'https://nodejs.org/'
+    },
+		{
+			name: 'Python',
+			icon: 'M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z',
+      link: 'https://www.python.org/'
+    },
+		{
+			name: 'Tailwind CSS',
+			icon: 'M12 6C9.33 6 7.67 7.33 7 10C8 8.67 9.17 8.17 10.5 8.5C11.26 8.69 11.81 9.24 12.41 9.85C13.39 10.85 14.5 12 17 12C19.67 12 21.33 10.67 22 8C21 9.33 19.83 9.83 18.5 9.5C17.74 9.31 17.2 8.76 16.59 8.15C15.61 7.15 14.5 6 12 6M7 12C4.33 12 2.67 13.33 2 16C3 14.67 4.17 14.17 5.5 14.5C6.26 14.69 6.8 15.24 7.41 15.85C8.39 16.85 9.5 18 12 18C14.67 18 16.33 16.67 17 14C16 15.33 14.83 15.83 13.5 15.5C12.74 15.31 12.2 14.76 11.59 14.15C10.61 13.15 9.5 12 7 12Z',
+      link: 'https://tailwindcss.com/'
+    }
+	];
+	const personalInfo = [
+		{
+			label: 'Standort',
+			value: 'Ravensburg, Deutschland',
+			icon: 'M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z'
+		},
+		{
+			label: 'GitHub',
+			value: 'github.com/iC4rds',
+			link: 'https://github.com/iC4rds',
+			icon: 'M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z'
+		},
+		{
+			label: 'E-Mail',
+			value: 'david-staudacher@outlook.de',
+			link: 'mailto:david-staudacher@outlook.de',
+			icon: 'M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z'
+		}
+	];
+</script>
+
 <section id="about" class="py-20 bg-catbase">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-16">
-      <h2 class="text-4xl md:text-5xl font-bold text-cattext mb-4">Über mich</h2>
-      <div class="w-24 h-1 bg-catblue mx-auto mb-6"></div>
-    </div>
-    
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 p-14">
-      <div class="bg-catsurface p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-        <div class="w-16 h-16 bg-catblue rounded-2xl flex items-center justify-center mb-6">
-          <svg class="w-8 h-8 text-catsurface" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"></path>
-          </svg>
-        </div>
-        <h3 class="text-2xl font-bold text-cattext mb-4">Frontend</h3>
-        <ul class="space-y-2 text-cattext">
-          <li class="flex items-center">
-            <span class="w-2 h-2 bg-catblue rounded-full mr-3"></span>
-            React & Next.js
-          </li>
-          <li class="flex items-center">
-            <span class="w-2 h-2 bg-catblue rounded-full mr-3"></span>
-            Vue.js & Nuxt.js
-          </li>
-          <li class="flex items-center">
-            <span class="w-2 h-2 bg-catblue rounded-full mr-3"></span>
-            Svelte & SvelteKit
-          </li>
-          <li class="flex items-center">
-            <span class="w-2 h-2 bg-catblue rounded-full mr-3"></span>
-            Tailwind CSS
-          </li>
-        </ul>
-      </div>
-      
-      <div class="bg-catsurface p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-        <div class="w-16 h-16 bg-catgreen rounded-2xl flex items-center justify-center mb-6">
-          <svg class="w-8 h-8 text-catsurface" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3.293 1.293a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L7.586 10 5.293 7.707a1 1 0 010-1.414zM11 12a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"></path>
-          </svg>
-        </div>
-        <h3 class="text-2xl font-bold text-cattext mb-4">Backend</h3>
-        <ul class="space-y-2 text-cattext">
-          <li class="flex items-center">
-            <span class="w-2 h-2 bg-catgreen rounded-full mr-3"></span>
-            Node.js: Express & NestJS
-          </li>
-          <li class="flex items-center">
-            <span class="w-2 h-2 bg-catgreen rounded-full mr-3"></span>
-            Bun: Hono & Elysia
-          </li>
-          <li class="flex items-center">
-            <span class="w-2 h-2 bg-catgreen rounded-full mr-3"></span>
-            PostgreSQL & SQLite & MongoDB
-          </li>
-          <li class="flex items-center">
-            <span class="w-2 h-2 bg-catgreen rounded-full mr-3"></span>
-            REST & GraphQL APIs
-          </li>
-        </ul>
-      </div>
-      
-      <div class="bg-catsurface p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-        <div class="w-16 h-16 bg-catmauve rounded-2xl flex items-center justify-center mb-6">
-          <svg class="w-8 h-8 text-catsurface" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path>
-          </svg>
-        </div>
-        <h3 class="text-2xl font-bold text-cattext mb-4">Tools & Design</h3>
-        <ul class="space-y-2 text-cattext">
-          <li class="flex items-center">
-            <span class="w-2 h-2 bg-catmauve rounded-full mr-3"></span>
-            Git & GitHub
-          </li>
-          <li class="flex items-center">
-            <span class="w-2 h-2 bg-catmauve rounded-full mr-3"></span>
-            VS Code & Visual Studio
-          </li>
-          <li class="flex items-center">
-            <span class="w-2 h-2 bg-catmauve rounded-full mr-3"></span>
-            Firebase & Turso & Fly.io
-          </li>
-          <li class="flex items-center">
-            <span class="w-2 h-2 bg-catmauve rounded-full mr-3"></span>
-            Jest & Cypress
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="text-center mb-16">
+			<h2 class="text-4xl md:text-5xl font-bold text-cattext mb-4">Über mich</h2>
+			<div class="w-24 h-1 bg-catblue mx-auto mb-6"></div>
+		</div>
+
+		<div class="grid lg:grid-cols-2 gap-16 items-start">
+			<div class="space-y-8">
+				<div class="space-y-6 text-cattext leading-relaxed">
+					<p class="text-lg">
+						Ich bin ein leidenschaftlicher Entwickler mit über 5 Jahren Erfahrung in der Entwicklung
+						von Webanwendungen. Meine Stärke liegt darin, saubere und effiziente Lösungen für
+						komplexe Probleme zu entwickeln.
+					</p>
+
+					<p class="text-lg">
+						Wenn ich nicht gerade code, beschäftige ich mich mit neuen Technologien, trage zu
+						Open-Source-Projekten bei oder genieße eine gute Tasse Kaffee. Ich liebe es,
+						kontinuierlich zu lernen und mich weiterzuentwickeln.
+					</p>
+
+					<p class="text-lg">
+						Mein Ziel ist es, digitale Erlebnisse zu schaffen, die nicht nur funktional, sondern
+						auch benutzerfreundlich und ästhetisch ansprechend sind.
+					</p>
+				</div>
+			</div>
+
+			<div class="space-y-8">
+				<div class="bg-catsurface rounded-lg p-6 border border-cattext/10">
+					<h3 class="text-cattext font-bold text-xl mb-6">Kontakt & Links</h3>
+					<div class="space-y-4">
+						{#each personalInfo as info}
+							<div class="flex items-center gap-4">
+								<div class="w-10 h-10 bg-catblue/20 rounded-lg flex items-center justify-center flex-shrink-0">
+									<svg class="w-5 h-5 text-catblue" fill="currentColor" viewBox="0 0 24 24">
+										<path d={info.icon} />
+									</svg>
+								</div>
+								<div class="flex-1 min-w-0">
+									<div class="text-cattext/70 text-sm">{info.label}</div>
+									{#if info.link}
+										<a
+											href={info.link}
+											target="_blank"
+											rel="noopener noreferrer"
+											class="text-cattext hover:text-catblue transition-colors font-medium truncate block"
+										>
+											{info.value}
+										</a>
+									{:else}
+										<div class="text-cattext font-medium">{info.value}</div>
+									{/if}
+								</div>
+							</div>
+						{/each}
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="mt-16">
+			<h3 class="text-cattext text-2xl font-bold mb-8 text-center">Tech Stack</h3>
+			<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+				{#each skills as skill}
+          <a 
+            href={skill.link} 
+            target="_blank"
+						rel="noopener noreferrer"
+            class="block"
+          >
+            <div class="group bg-catsurface hover:bg-cattext/5 border border-cattext/10 hover:border-catblue/30 rounded-lg p-6 text-center transition-all duration-300">
+              <div class="w-12 h-12 mx-auto mb-4 text-cattext group-hover:text-catblue transition-colors">
+                <svg viewBox="0 0 24 24" fill="currentColor" class="w-full h-full">
+                  <path d={skill.icon} />
+                </svg>
+              </div>
+              <h4 class="text-cattext font-medium text-sm group-hover:text-catblue transition-colors">
+                {skill.name}
+              </h4>
+            </div>
+          </a>
+				{/each}
+			</div>
+		</div>
+	</div>
 </section>

@@ -63,27 +63,18 @@
 			<div class="space-y-8">
 				<div class="space-y-6 text-cattext leading-relaxed">
 					<p class="text-lg">
-						Ich bin ein leidenschaftlicher Entwickler mit über 5 Jahren Erfahrung in der Entwicklung
-						von Webanwendungen. Meine Stärke liegt darin, saubere und effiziente Lösungen für
-						komplexe Probleme zu entwickeln.
+						Ich bin 20 Jahre alt und mache ein duales Studium bei <a href="https://sap.com" target="_blank" class="hover:text-catblue">SAP</a> als Informatiker. Meine
+            Leidenschaft fürs Programmieren kam in der Schulzeit.
 					</p>
 
 					<p class="text-lg">
-						Wenn ich nicht gerade code, beschäftige ich mich mit neuen Technologien, trage zu
-						Open-Source-Projekten bei oder genieße eine gute Tasse Kaffee. Ich liebe es,
-						kontinuierlich zu lernen und mich weiterzuentwickeln.
-					</p>
-
-					<p class="text-lg">
-						Mein Ziel ist es, digitale Erlebnisse zu schaffen, die nicht nur funktional, sondern
-						auch benutzerfreundlich und ästhetisch ansprechend sind.
+						Wenn ich nicht gerade code, höre ich Musik, schaue Filme, trinke Kaffee. Meistens mach ich aber alles gleichzeitig.
 					</p>
 				</div>
 			</div>
 
 			<div class="space-y-8">
 				<div class="bg-catsurface rounded-lg p-6 border border-cattext/10">
-					<h3 class="text-cattext font-bold text-xl mb-6">Kontakt & Links</h3>
 					<div class="space-y-4">
 						{#each personalInfo as info}
 							<div class="flex items-center gap-4">

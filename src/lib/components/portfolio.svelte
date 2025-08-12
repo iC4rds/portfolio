@@ -67,6 +67,8 @@
             <div class="absolute inset-0 bg-catblue bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-300 flex items-center justify-center">
               <a 
                 href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 class="text-catsurface font-semibold px-6 py-3 border-2 border-catsurface rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-catsurface hover:text-cattext"
               >
                 Projekt ansehen

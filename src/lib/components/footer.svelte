@@ -9,6 +9,8 @@
 			<div class="flex justify-center space-x-6">
 				<a
 					href="https://github.com/iC4rds"
+					target="_blank"
+					rel="noopener noreferrer"
 					class="text-cattext/60 hover:text-cattext transition-colors duration-200"
 					aria-label="GitHub"
 				>
@@ -21,6 +23,8 @@
 
 				<a
 					href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1"
+					target="_blank"
+					rel="noopener noreferrer"
 					class="text-cattext/60 hover:text-cattext transition-colors duration-200"
 					aria-label="LinkedIn"
 				>
@@ -33,6 +37,8 @@
 
 				<a
 					href="https://letterboxd.com/iCards/"
+					target="_blank"
+					rel="noopener noreferrer"
 					class="text-cattext/60 hover:text-cattext transition-colors duration-200"
 					aria-label="Twitter"
 				>

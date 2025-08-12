@@ -1,7 +1,7 @@
-<section id="skills" class="py-20 bg-catbase">
+<section id="about" class="py-20 bg-catbase">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
-      <h2 class="text-4xl md:text-5xl font-bold text-cattext mb-4">Meine Skills</h2>
+      <h2 class="text-4xl md:text-5xl font-bold text-cattext mb-4">Über mich</h2>
       <div class="w-24 h-1 bg-catblue mx-auto mb-6"></div>
     </div>
     

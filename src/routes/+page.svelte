@@ -1,7 +1,7 @@
 <script>
   import Navbar from '$lib/components/navbar.svelte';
   import Hero from '$lib/components/hero.svelte';
-  import Skills from '$lib/components/skills.svelte';
+  import Skills from '$lib/components/about.svelte';
   import Portfolio from '$lib/components/portfolio.svelte';
   import Contact from '$lib/components/contact.svelte';
   import Footer from '$lib/components/footer.svelte';

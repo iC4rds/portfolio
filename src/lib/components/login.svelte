@@ -36,7 +36,6 @@
       
       if (response.ok) {
         const data = await response.json();
-        // Store auth token or session info if provided
         if (data.token) {
           localStorage.setItem('auth-token', data.token);
         }

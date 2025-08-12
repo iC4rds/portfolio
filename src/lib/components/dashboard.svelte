@@ -1,6 +1,6 @@
 <script lang="ts">
   import { writable } from 'svelte/store';
-  import LoginModal from './login-modal.svelte';
+  import LoginModal from './login.svelte';
   
   type Message = {
     name: string;

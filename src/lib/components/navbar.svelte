@@ -4,7 +4,7 @@
 
 	const navItems = [
 		{ href: '#home', label: 'Home' },
-		{ href: '#skills', label: 'Skills' },
+		{ href: '#about', label: 'About' },
 		{ href: '#portfolio', label: 'Portfolio' },
 		{ href: '#contact', label: 'Kontakt' }
 	];
@@ -28,7 +28,7 @@
 		const handleScroll = () => {
       if (isScrolling) return;
 
-			const sections = ['#home', '#skills', '#portfolio', '#contact'];
+			const sections = ['#home', '#about', '#portfolio', '#contact'];
 			const scrollPosition = window.scrollY + 100;
 
 			for (let i = sections.length - 1; i >= 0; i--) {

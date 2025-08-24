@@ -68,6 +68,3 @@ This portfolio uses the beautiful [Catppuccin](https://catppuccin.com/) color pa
 - **Blue**: `#8caaee`
 - **Mauve**: `#ca9ee6`
 - **Green**: `#a6d189`
-
-## License
-MIT

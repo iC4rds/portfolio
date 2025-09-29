@@ -4,14 +4,14 @@
       id: 1,
       title: "Weather cli",
       description: "A command-line tool to fetch current weather data, with multi-language support.",
-      image: "/rice.png?height=300&width=400",
+      image: "/placeholder.svg?height=300&width=400",
       tags: ["TypeScript", "Bun", "OpenWeatherMap"],
       link: "https://github.com/iC4rds/weather-cli"
     },
     {
       id: 2,
       title: "Gym App",
-      description: "App zum Tracken von Workouts und Exercises mit React Native und Firebase",
+      description: "A simple gym app for planning, managing, and tracking workouts and exercises.",
       image: "/placeholder.svg?height=300&width=400",
       tags: ["React-Native", "Firebase", "Tailwind"],
       link: "https://github.com/iC4rds/gym-app"
@@ -19,7 +19,7 @@
     {
       id: 3,
       title: "Portfolio Website",
-      description: "A modern, responsive portfolio website built with SvelteKit and styled with Catppuccin colors.",
+      description: "My modern portfolio website styled with Catppuccin colors.",
       image: "/placeholder.svg?height=300&width=400",
       tags: ["SvelteKit", "Bun", "Turso"],
       link: "https://github.com/iC4rds/portfolio"
@@ -27,10 +27,18 @@
     {
       id: 4,
       title: "Linux dotfiles",
-      description: "dotfiles and configuration files for my Arch Linux workflow with Hyprland.",
+      description: "Dotfiles and configuration files for my Arch Linux workflow with Hyprland.",
       image: "/rice.png?height=300&width=400",
-      tags: ["Arch", "Hyprland", "Fish"],
+      tags: ["Arch", "Hyprland"],
       link: "https://github.com/iC4rds/dotfiles"
+    },
+    {
+      id: 5,
+      title: "Blood Tracker",
+      description: "A simple app to store and track blood pressure measurement.",
+      image: "/placeholder.svg?height=300&width=400",
+      tags: ["React-Native", "Supabase", "Tailwind"],
+      link: "https://github.com/iC4rds/blood-tracker"
     },
   ];
 
@@ -51,7 +59,7 @@
 <section id="portfolio" class="py-20 bg-catbase">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
-      <h2 class="text-4xl md:text-5xl font-bold text-cattext mb-4">Mein Portfolio</h2>
+      <h2 class="text-4xl md:text-5xl font-bold text-cattext mb-4">Mein portfolio</h2>
       <div class="w-24 h-1 bg-catblue mx-auto mb-6"></div>
     </div>
     

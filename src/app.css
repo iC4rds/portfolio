@@ -9,3 +9,19 @@
   --color-catmauve: #ca9ee6;
   --color-catgreen: #a6d189;
 }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: var(--color-catcrust);
+}
+
+body {
+  background-color: var(--color-catbase);
+}
+
+#__svelte {
+  min-height: 100vh;
+  background-color: var(--color-catbase);
+}

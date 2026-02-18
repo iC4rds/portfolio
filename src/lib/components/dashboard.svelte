@@ -25,7 +25,7 @@
       $messages = data;
       $error = null;
     } catch (err) {
-      $error = 'Fehler beim Laden der Nachrichten';
+      $error = 'Error loading messages';
       console.error('Error loading messages:', err);
     } finally {
       $loading = false;
@@ -33,7 +33,7 @@
   }
   
   function formatDate(date: Date) {
-    return date.toLocaleDateString('de-DE', {
+    return date.toLocaleDateString('en-En', {
       year: 'numeric',
       month: 'long',
       day: 'numeric',
@@ -63,7 +63,7 @@
       {#if $loading}
         <div class="text-center py-12">
           <div class="animate-spin w-8 h-8 border-2 border-cattext/20 border-t-cattext rounded-full mx-auto mb-4"></div>
-          <p class="text-cattext">Nachrichten werden geladen...</p>
+          <p class="text-cattext">Messages are loading...</p>
         </div>
       {:else if $error}
         <div class="text-center py-12">
@@ -72,12 +72,12 @@
             onclick={loadMessages}
             class="bg-catblue hover:bg-catsurface text-catsurface hover:text-catblue px-4 py-2 rounded-lg transition-colors"
           >
-            Erneut versuchen
+            Try again
           </button>
         </div>
       {:else if $messages.length === 0}
         <div class="text-center py-12">
-          <p class="text-cattext">Keine Nachrichten vorhanden</p>
+          <p class="text-cattext">No messages available</p>
         </div>
       {:else}
         <div class="space-y-6">

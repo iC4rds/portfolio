@@ -60,13 +60,13 @@
     <div class="bg-catsurface border border-cattext/20 rounded-lg shadow-2xl w-full max-w-md">
       <div class="p-6 border-b border-cattext/10">
         <h2 class="text-cattext text-2xl font-bold text-center">Dashboard Login</h2>
-        <p class="text-cattext/70 text-center mt-2">Bitte melden Sie sich an, um fortzufahren</p>
+        <p class="text-cattext/70 text-center mt-2">Please log in to continue</p>
       </div>
       
       <form onsubmit={handleLogin} class="p-6 space-y-4">
         <div>
           <label for="username" class="block text-cattext font-medium mb-2">
-            Benutzername
+            Username
           </label>
           <input
             type="text"
@@ -74,14 +74,14 @@
             bind:value={username}
             disabled={loading}
             class="w-full bg-catbase border border-cattext/20 text-cattext px-4 py-3 rounded-lg focus:outline-none focus:border-catblue transition-colors disabled:opacity-50"
-            placeholder="Ihr Benutzername"
+            placeholder="Your Username"
             autocomplete="username"
           />
         </div>
         
         <div>
           <label for="password" class="block text-cattext font-medium mb-2">
-            Passwort
+            Password
           </label>
           <input
             type="password"
@@ -89,7 +89,7 @@
             bind:value={password}
             disabled={loading}
             class="w-full bg-catbase border border-cattext/20 text-cattext px-4 py-3 rounded-lg focus:outline-none focus:border-catblue transition-colors disabled:opacity-50"
-            placeholder="Ihr Passwort"
+            placeholder="Your Password"
             autocomplete="current-password"
           />
         </div>
@@ -107,9 +107,9 @@
         >
           {#if loading}
             <div class="animate-spin w-4 h-4 border-2 border-catsurface/30 border-t-catsurface rounded-full"></div>
-            Anmeldung läuft...
+            Logging in...
           {:else}
-            Anmelden
+            Login
           {/if}
         </button>
       </form>

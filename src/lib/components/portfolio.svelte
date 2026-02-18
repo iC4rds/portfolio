@@ -59,7 +59,7 @@
 <section id="portfolio" class="py-20 bg-catbase">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
-      <h2 class="text-4xl md:text-5xl font-bold text-cattext mb-4">Mein Portfolio</h2>
+      <h2 class="text-4xl md:text-5xl font-bold text-cattext mb-4">My portfolio</h2>
       <div class="w-24 h-1 bg-catblue mx-auto mb-6"></div>
     </div>
     
@@ -79,7 +79,7 @@
                 rel="noopener noreferrer"
                 class="text-catsurface font-semibold px-6 py-3 border-2 border-catsurface rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-catsurface hover:text-cattext"
               >
-                Projekt ansehen
+                View Project
               </a>
             </div>
           </div>
@@ -106,7 +106,7 @@
           on:click={toggleShowAll}
           class="bg-catblue hover:bg-catsurface text-catsurface hover:text-catblue px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
         >
-          Alle Projekte ansehen
+          Show all projects
         </button>
       </div>
     {/if}
@@ -116,7 +116,7 @@
           on:click={toggleHideAll}
           class="bg-catblue hover:bg-catsurface text-catsurface hover:text-catblue px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
         >
-          Weniger anzeigen
+          Show less
         </button>
       </div>
     {/if}

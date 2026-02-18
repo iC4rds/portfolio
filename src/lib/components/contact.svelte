@@ -24,7 +24,7 @@
 		} catch (error) {
 			console.error('Submit error:', error);
 			errorMessage =
-				'Ein unerwarteter Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.';
+				'An unexpected error occurred. Please try again later.';
 			setTimeout(() => {
 				errorMessage = '';
 			}, 5000);
@@ -38,28 +38,28 @@
 	 */
 	function validateForm() {
 		if (!formData.name.trim()) {
-			errorMessage = 'Bitte geben Sie Ihren Namen ein.';
+			errorMessage = 'Please enter your name.';
 			return false;
 		}
 
 		if (!formData.email.trim()) {
-			errorMessage = 'Bitte geben Sie Ihre E-Mail Adresse ein.';
+			errorMessage = 'Please enter your email address.';
 			return false;
 		}
 
 		if (!formData.subject.trim()) {
-			errorMessage = 'Bitte geben Sie einen Betreff ein.';
+			errorMessage = 'Please enter a subject.';
 			return false;
 		}
 
 		if (!formData.message.trim()) {
-			errorMessage = 'Bitte geben Sie eine Nachricht ein.';
+			errorMessage = 'Please enter a message.';
 			return false;
 		}
 
 		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 		if (!emailRegex.test(formData.email)) {
-			errorMessage = 'Bitte geben Sie eine gültige E-Mail Adresse ein.';
+			errorMessage = 'Please enter a valid email address.';
 			return false;
 		}
 
@@ -85,20 +85,20 @@
 			const result = await response.json();
 
 			if (response.ok) {
-				submitMessage = 'Vielen Dank für Ihre Nachricht! Ich werde mich bald bei Ihnen melden.';
+				submitMessage = 'Thank you for your message! I will get back to you soon.';
 				formData = { name: '', email: '', subject: '', message: '' };
 
 				setTimeout(() => {
 					submitMessage = '';
 				}, 5000);
 			} else {
-				errorMessage = result.error || 'Fehler beim Senden der Nachricht.';
+				errorMessage = result.error || 'Error sending the message.';
 				setTimeout(() => {
 					errorMessage = '';
 				}, 5000);
 			}
 		} catch (error) {
-			throw new Error('Netzwerkerror: ' + error);
+			throw new Error('Network error: ' + error);
 		}
 	}
 </script>
@@ -106,7 +106,7 @@
 <section id="contact" class="py-20 bg-catbase">
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="text-center mb-16">
-			<h2 class="text-4xl md:text-5xl font-bold text-cattext mb-4">Kontakt</h2>
+			<h2 class="text-4xl md:text-5xl font-bold text-cattext mb-4">Contact</h2>
 			<div class="w-24 h-1 bg-catblue mx-auto mb-6"></div>
 		</div>
 
@@ -125,7 +125,7 @@
 							bind:value={formData.name}
 							required
 							class="text-cattext w-full px-4 py-3 border border-cattext rounded-lg focus:ring-2 focus:ring-catblue focus:border-transparent transition-colors"
-							placeholder="Ihr Name"
+							placeholder="Your Name"
 						/>
 					</div>
 					<div>
@@ -136,26 +136,26 @@
 							bind:value={formData.email}
 							required
 							class="text-cattext w-full px-4 py-3 border border-cattext rounded-lg focus:ring-2 focus:ring-catblue focus:border-transparent transition-colors"
-							placeholder="ihre.email@beispiel.com"
+							placeholder="your.email@example.com"
 						/>
 					</div>
 				</div>
 
 				<div>
-					<label for="subject" class="block text-sm font-medium text-cattext mb-2">Betreff</label>
+					<label for="subject" class="block text-sm font-medium text-cattext mb-2">Subject</label>
 					<input
 						type="text"
 						id="subject"
 						bind:value={formData.subject}
 						required
 						class="text-cattext w-full px-4 py-3 border border-cattext rounded-lg focus:ring-2 focus:ring-catblue focus:border-transparent transition-colors"
-						placeholder="Worum geht es?"
+						placeholder="What is it about?"
 					/>
 				</div>
 
 				<div>
 					<label for="message" class="block text-sm font-medium text-cattext mb-2"
-						>Nachricht</label
+						>Message</label
 					>
 					<textarea
 						id="message"
@@ -163,7 +163,7 @@
 						required
 						rows="5"
 						class="text-cattext w-full px-4 py-3 border border-cattext rounded-lg focus:ring-2 focus:ring-catblue focus:border-transparent transition-colors resize-none"
-						placeholder="Erzählen Sie mir von Ihrem Projekt..."
+						placeholder="Tell me about your project..."
 					></textarea>
 				</div>
 
@@ -208,9 +208,9 @@
 							d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
 						></path>
 					</svg>
-					Wird gesendet...
+					Sending...
 				{:else}
-					Nachricht senden
+					Send Message
 				{/if}
 			</button>
 		</div>

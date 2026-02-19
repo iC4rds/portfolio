@@ -7,7 +7,7 @@ const config = {
 
 	kit: {
 		adapter: adapter({
-			runtime: 'bun1.x'  // Geändert von 'nodejs' zu 'bun1.x'
+			runtime: 'nodejs20.x'
 		})
 	}
 };

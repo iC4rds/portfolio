@@ -1,5 +1,7 @@
 {
-  "buildCommand": "bun run build",
-  "installCommand": "bun install",
-  "framework": "sveltekit"
+  "functions": {
+    "api/**": {
+      "runtime": "nodejs20.x"
+    }
+  }
 }

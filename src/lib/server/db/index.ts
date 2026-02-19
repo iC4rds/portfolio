@@ -1,5 +1,5 @@
 import { drizzle } from 'drizzle-orm/libsql';
-import { createClient } from '@libsql/client';
+import { createClient } from '@libsql/client/web';
 import * as schema from './schema';
 import { env } from '$env/dynamic/private';
 
@@ -9,7 +9,6 @@ if (!env.DATABASE_AUTH_TOKEN) throw new Error('DATABASE_AUTH_TOKEN is not set');
 const client = createClient({
 	url: env.DATABASE_URL,
 	authToken: env.DATABASE_AUTH_TOKEN,
-	syncUrl: undefined
 });
 
 export const db = drizzle(client, { schema });

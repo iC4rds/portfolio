@@ -4,7 +4,6 @@
       id: 1,
       title: "Weather cli",
       description: "A command-line tool to fetch current weather data, with multi-language support.",
-      image: "/placeholder.svg?height=300&width=400",
       tags: ["TypeScript", "Bun", "OpenWeatherMap"],
       link: "https://github.com/iC4rds/weather-cli"
     },
@@ -12,7 +11,6 @@
       id: 2,
       title: "Gym App",
       description: "A simple gym app for planning, managing, and tracking workouts and exercises.",
-      image: "/placeholder.svg?height=300&width=400",
       tags: ["React-Native", "Firebase", "Tailwind"],
       link: "https://github.com/iC4rds/gym-app"
     },
@@ -20,7 +18,6 @@
       id: 3,
       title: "Portfolio Website",
       description: "My modern portfolio website styled with Catppuccin colors.",
-      image: "/placeholder.svg?height=300&width=400",
       tags: ["SvelteKit", "Bun", "Turso"],
       link: "https://github.com/iC4rds/portfolio"
     },
@@ -28,7 +25,6 @@
       id: 4,
       title: "Linux dotfiles",
       description: "Dotfiles and configuration files for my Arch Linux workflow with Hyprland.",
-      image: "/rice.png?height=300&width=400",
       tags: ["Arch", "Hyprland"],
       link: "https://github.com/iC4rds/dotfiles"
     },
@@ -36,7 +32,6 @@
       id: 5,
       title: "Blood Tracker",
       description: "A simple app to store and track blood pressure measurement.",
-      image: "/placeholder.svg?height=300&width=400",
       tags: ["React-Native", "Supabase", "Tailwind"],
       link: "https://github.com/iC4rds/blood-tracker"
     },
@@ -66,12 +61,7 @@
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       {#each displayedProjects as project}
         <div class="bg-catsurface rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden group">
-          <div class="relative overflow-hidden">
-            <img 
-              src={project.image} 
-              alt={project.title}
-              class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
-            />
+          <div class="relative overflow-hidden w-full h-30 object-cover group-hover:scale-110 transition-transform duration-300">
             <div class="absolute inset-0 bg-catblue bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-300 flex items-center justify-center">
               <a 
                 href={project.link}

@@ -1,10 +1,5 @@
 {
   "buildCommand": "bun run build",
   "installCommand": "bun install",
-  "framework": "sveltekit",
-  "functions": {
-    "src/routes/api/*": {
-      "runtime": "bun@1.0.0"
-    }
-  }
+  "framework": "sveltekit"
 }

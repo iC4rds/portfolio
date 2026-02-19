@@ -4,7 +4,7 @@
   "framework": "sveltekit",
   "functions": {
     "src/routes/api/*": {
-      "runtime": "bun@1.x"
+      "runtime": "bun@1.0.0"
     }
   }
 }

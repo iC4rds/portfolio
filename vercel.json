@@ -1,0 +1,11 @@
+{
+  "buildCommand": "bun run build",
+  "installCommand": "bun install",
+  "devCommand": "bun run dev",
+  "framework": "sveltekit",
+  "functions": {
+    "api/*": {
+      "runtime": "bun@1.0.0"
+    }
+  }
+}

@@ -4,9 +4,7 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
 	plugins: [tailwindcss(), sveltekit()],
-	resolve: {
-    alias: {
-      '@libsql/client': '@libsql/client/web'
-    }
+	ssr: {
+    noExternal: ['@libsql/client']
   }
 });

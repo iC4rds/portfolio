@@ -23,8 +23,8 @@ export const POST: RequestHandler = async ({ request }) => {
   return json("Login erfolgreich", { status: 201 });
 };
 
-const login = (username: string, password: string): boolean => {
-  if (username === env.USERNAME && password === env.PASSWORD) {
+const login = (username: string, pw: string): boolean => {
+  if (username === env.USERNAME && pw === env.PASSWORD) {
     return true;
   }
   return false;

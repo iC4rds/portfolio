@@ -1,18 +1,11 @@
 import { json } from '@sveltejs/kit';
-import { getDb } from '$lib/server/db';
+import { db } from '$lib/server/db';
 import { messages } from '$lib/server/db/schema';
 import type { RequestHandler } from './$types';
 import { desc } from 'drizzle-orm';
 
 export const GET: RequestHandler = async () => {
   try {
-    const db = await getDb();
-    
-    // Wenn keine DB-Verbindung, gib leeres Array zurück (oder Fehler)
-    if (!db) {
-      return json([]);
-    }
-
     const allMessages = await db
       .select()
       .from(messages)
@@ -27,12 +20,6 @@ export const GET: RequestHandler = async () => {
 
 export const POST: RequestHandler = async ({ request }) => {
   try {
-    const db = await getDb();
-    
-    if (!db) {
-      return json({ error: 'Database not available' }, { status: 503 });
-    }
-
     const data = await request.json();
     
     if (!data.name || !data.email || !data.subject || !data.message) {

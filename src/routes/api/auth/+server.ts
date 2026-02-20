@@ -24,7 +24,7 @@ export const POST: RequestHandler = async ({ request }) => {
 };
 
 const login = (username: string, pw: string): boolean => {
-  if (username === env.USERNAME && pw === env.PASSWORD) {
+  if (username === env.PUBLIC_USERNAME && pw === env.PASSWORD) {
     return true;
   }
   return false;

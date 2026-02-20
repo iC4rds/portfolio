@@ -1,17 +1,43 @@
 import { drizzle } from 'drizzle-orm/libsql';
 import { createClient } from '@libsql/client/http';
 import * as schema from './schema';
-import { env } from '$env/dynamic/private';
+import { building } from '$app/environment';
 
-// Prüfung nur, wenn wir nicht im Build sind
-if (process.env.NODE_ENV !== 'production' || !process.env.CF_PAGES) {
-  if (!env.DATABASE_URL) throw new Error('DATABASE_URL is not set');
-  if (!env.DATABASE_AUTH_TOKEN) throw new Error('DATABASE_AUTH_TOKEN is not set');
+// Während des Builds keine Datenbankverbindung herstellen
+let _db: any = null;
+
+export async function getDb() {
+  // Wenn wir im Build sind, gib null zurück
+  if (building) {
+    return null;
+  }
+
+  // Wenn wir bereits eine Verbindung haben, benutze sie
+  if (_db) {
+    return _db;
+  }
+
+  // Dynamischer Import der Environment-Variablen
+  const { env } = await import('$env/dynamic/private');
+  
+  if (!env.DATABASE_URL || !env.DATABASE_AUTH_TOKEN) {
+    console.error('Database credentials missing');
+    return null;
+  }
+
+  try {
+    const client = createClient({
+      url: env.DATABASE_URL,
+      authToken: env.DATABASE_AUTH_TOKEN,
+    });
+    
+    _db = drizzle(client, { schema });
+    return _db;
+  } catch (error) {
+    console.error('Failed to create database connection:', error);
+    return null;
+  }
 }
 
-const client = createClient({
-  url: env.DATABASE_URL!,
-  authToken: env.DATABASE_AUTH_TOKEN!,
-});
-
-export const db = drizzle(client, { schema });
+// Für TypeScript
+export type DbType = Awaited<ReturnType<typeof getDb>>;

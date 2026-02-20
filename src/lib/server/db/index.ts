@@ -1,3 +1,4 @@
+// $lib/server/db/index.ts
 import { drizzle } from 'drizzle-orm/libsql';
 import * as schema from './schema';
 import { env } from '$env/dynamic/private';
@@ -7,14 +8,13 @@ if (!env.DATABASE_AUTH_TOKEN) throw new Error('DATABASE_AUTH_TOKEN is not set');
 
 let client;
 if (env.VERCEL) {
-  // Für Vercel: HTTP-Client verwenden (kein WebSocket)
-  const { createClient } = await import('@libsql/client/http');
-  client = createClient({
+  // Workaround für Vercel
+  const libsql = require('@libsql/client/http');
+  client = libsql.createClient({
     url: env.DATABASE_URL,
     authToken: env.DATABASE_AUTH_TOKEN,
   });
 } else {
-  // Für lokale Entwicklung: Web-Client
   const { createClient } = await import('@libsql/client/web');
   client = createClient({
     url: env.DATABASE_URL,

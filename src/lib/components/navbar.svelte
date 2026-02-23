@@ -49,7 +49,7 @@
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="flex justify-center items-center h-16">
 			<div class="flex items-center justify-center w-full">
-				<div class="flex items-baseline space-x-4 sm:space-x-8 md:space-x-16 lg:space-x-64">
+				<div class="flex items-baseline space-x-1 sm:space-x-8 md:space-x-16 lg:space-x-64">
 					{#each navItems as item}
 						<button
 							onclick={() => scrollToSection(item.href)}

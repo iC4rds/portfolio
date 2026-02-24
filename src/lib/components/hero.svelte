@@ -28,15 +28,13 @@
     </h1>
   </div>
 
-  <div class="relative z-10 min-h-screen flex items-end p-10 justify-center pt-16">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <div 
-        class="mb-8 transform transition-transform duration-75"
-      >
+  <div class="relative z-10 min-h-screen flex items-end justify-center sm:p-6 md:p-8 lg:p-10 pt-16">
+    <div class="max-w-4xl mx-auto px-2 sm:px-4 md:px-6 text-center">
+      <div class="mb-4 sm:mb-6 md:mb-8 transform transition-transform duration-75">
         <img 
           src="/image.png?height=200&width=200" 
           alt="profilepicture" 
-          class="w-100 h-100 mx-auto object-cover shadow-2xl text-cattext"
+          class="w-50 h-50 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-100 lg:h-100 mx-auto object-cover shadow-2xl text-cattext rounded-2xl sm:rounded-3xl"
         />
       </div>
     </div>

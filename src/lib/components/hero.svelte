@@ -14,7 +14,7 @@
 <section
   bind:this={heroSection}
   id="home"
-  class="relative min-h-screen flex items-center justify-center bg-gradient-to-br bg-catbase pt-16 overflow-hidden"
+  class="relative flex items-center justify-center bg-gradient-to-br bg-catbase pt-16 overflow-hidden"
 >
   <div 
     class="absolute inset-0 flex items-top p-18 justify-center pointer-events-none"
@@ -28,15 +28,13 @@
     </h1>
   </div>
 
-  <div class="relative z-10 min-h-screen flex items-end p-10 justify-center pt-16">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <div 
-        class="mb-8 transform transition-transform duration-75"
-      >
+<div class="relative z-10 flex justify-center -mt-[clamp(4rem,10vh,8rem)] pt-45 sm:pt-60 md:pt-70 lg:pt-80 pb-5">
+    <div class="max-w-4xl mx-auto px-2 text-center">
+      <div class="mb-4 transform transition-transform duration-75">
         <img 
           src="/image.png?height=200&width=200" 
           alt="profilepicture" 
-          class="w-100 h-100 mx-auto object-cover shadow-2xl text-cattext"
+          class="w-50 h-50 sm:w-70 sm:h-70 md:w-90 md:h-90 lg:w-100 lg:h-100 mx-auto object-cover text-cattext rounded-2xl sm:rounded-3xl"
         />
       </div>
     </div>

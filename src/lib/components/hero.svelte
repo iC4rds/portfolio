@@ -28,7 +28,7 @@
     </h1>
   </div>
 
-<div class="relative z-10 flex justify-center -mt-[clamp(4rem,10vh,8rem)] pt-45 sm:pt-60 md:pt-70 lg:pt-80 pb-5">
+<div class="relative z-10 flex justify-center -mt-[clamp(4rem,10vh,8rem)] pt-50 sm:pt-60 md:pt-70 lg:pt-90 pb-5">
     <div class="max-w-4xl mx-auto px-2 text-center">
       <div class="mb-4 transform transition-transform duration-75">
         <img 

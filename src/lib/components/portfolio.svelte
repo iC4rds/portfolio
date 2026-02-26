@@ -51,7 +51,7 @@
   }
 </script>
 
-<section id="portfolio" class="py-20 bg-catbase">
+<section id="portfolio" class="py-20 bg-catbase min-h-screen">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
       <h2 class="text-4xl md:text-5xl font-bold text-cattext mb-4">My portfolio</h2>

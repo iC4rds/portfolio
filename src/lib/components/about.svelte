@@ -37,11 +37,15 @@
 			<div class="space-y-8">
 				<div class="space-y-6 text-cattext leading-relaxed">
 					<p class="text-lg">
-						I am 20 years old and doing a dual study program at <a href="https://sap.com" target="_blank" class="hover:text-catblue">SAP</a> as an IT specialist. My passion for programming started in school.
+						I am 20 years old and doing a dual study program at <a href="https://sap.com" target="_blank" class="hover:text-catblue">SAP</a> in Computer Science focusing on Artificial Intelligence and Software Development. My passion for programming started in school.
 					</p>
 
 					<p class="text-lg">
-						When I'm not coding, I listen to music, watch movies, or drink coffee. Usually, I do all of these at the same time.
+						I have experience in various programming languages and frameworks, including TypeScript, Python, React and Svelte. I enjoy building web applications and exploring new technologies.
+					</p>
+
+					<p class="text-lg">
+						When I'm not coding, I listen to music, watch movies, or drink coffee.
 					</p>
 				</div>
 			</div>

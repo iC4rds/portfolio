@@ -103,10 +103,9 @@
         <button
           type="submit"
           disabled={loading}
-          class="w-full bg-catblue hover:bg-catblue/80 disabled:bg-catblue/50 text-catsurface font-semibold py-3 px-4 rounded-lg transition-colors disabled:cursor-not-allowed flex items-center justify-center gap-2"
+          class="w-full bg-catblue hover:bg-catbase disabled:bg-catblue/50 text-catsurface hover:text-catblue font-semibold py-3 px-4 rounded-lg transition-colors disabled:cursor-not-allowed flex items-center justify-center gap-2"
         >
           {#if loading}
-            <div class="animate-spin w-4 h-4 border-2 border-catsurface/30 border-t-catsurface rounded-full"></div>
             Logging in...
           {:else}
             Login

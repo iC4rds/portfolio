@@ -37,7 +37,7 @@
 			<div class="space-y-8">
 				<div class="space-y-6 text-cattext leading-relaxed">
 					<p class="text-lg">
-						I am 20 years old and doing a dual study program at <a href="https://sap.com" target="_blank" class="hover:text-catblue">SAP</a> in Computer Science focusing on Artificial Intelligence and Software Development. My passion for programming started in school.
+						I am 21 years old and doing a dual study program at <a href="https://sap.com" target="_blank" class="hover:text-catblue">SAP</a> in Computer Science focusing on Artificial Intelligence and Software Development. My passion for programming started in school.
 					</p>
 
 					<p class="text-lg">
